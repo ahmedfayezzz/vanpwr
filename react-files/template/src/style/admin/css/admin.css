@@ -3769,7 +3769,7 @@ html.menu-opened body {
   color: #fff !important;
 }
 
-.main-wrapper > .header {
+/* .main-wrapper > .header {
   background: #fff;
   border-bottom: 1px solid #e5e9f2;
   left: 270px;
@@ -3778,7 +3778,7 @@ html.menu-opened body {
   top: 0;
   border-radius: 0;
   padding: 15px;
-}
+} */
 
 .profilemenu {
   background: white;
