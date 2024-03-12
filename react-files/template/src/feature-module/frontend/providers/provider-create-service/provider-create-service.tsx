@@ -987,7 +987,7 @@ const ProviderCreateService = () => {
                         <div className="col-md-6">
                           <div className="form-group">
                             <label className="col-form-label">
-                              Radius from your adreess your willing to work (in
+                              Radius from your address your willing to work (in
                               miles) <span className="text-danger">*</span>
                             </label>
                             <input
@@ -1011,7 +1011,7 @@ const ProviderCreateService = () => {
                           </div>
                           <div className="form-group">
                             <label className="col-form-label">
-                              Vehicle Registraion Number{' '}
+                              Vehicle Registration Number{' '}
                               <span className="text-danger">*</span>
                             </label>
                             <input
@@ -1769,7 +1769,7 @@ const ProviderCreateService = () => {
                           <h6>
                             Drag &amp; drop files or <span>Browse</span>
                           </h6>
-                          <p>Supported formates: JPEG, PNG, PDF</p>
+                          <p>Supported Formats: JPEG, PNG, PDF</p>
                           <input
                             type="file"
                             accept="image/jpeg, image/png, application/pdf"

@@ -34,7 +34,7 @@ const ProviderAuthHeader2 = () => {
   return (
     <header className="header">
       <div className="container">
-        <nav className="navbar navbar-expand-lg header-nav">
+        <nav className="navbar navbar-expand-lg header-nav-new">
           <div className="navbar-header">
             <Link onClick={toogle} id="mobile_btn" to="#">
               <span className="bar-icon">

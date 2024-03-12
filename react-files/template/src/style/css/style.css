@@ -132,7 +132,6 @@ ul {
   margin: 0;
 }
 
-
 /*-----------------
     2. Bootstrap Classes
 -----------------------*/
@@ -1128,7 +1127,7 @@ table.dataTable thead .sorting_desc_disabled:after {
   float: left;
   max-height: 32px;
 }
-.header-nav {
+.header-nav-new {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1969,12 +1968,16 @@ html.menu-opened body {
   background: #fff; /* Change this to match your design */
   z-index: 1000; /* Make sure the menu appears above other content */
   overflow-y: auto; /* Add scroll if the content is taller than the screen */
-  transform: translateX(-100%); /* Start the menu off the left side of the screen */
+  transform: translateX(
+    -100%
+  ); /* Start the menu off the left side of the screen */
   transition: transform 0.3s ease-in-out; /* Animate the menu sliding in and out */
 }
 
 .menu-opened .mobile-menu {
-  transform: translateX(0); /* Slide the menu onto the screen when the menu is open */
+  transform: translateX(
+    0
+  ); /* Slide the menu onto the screen when the menu is open */
 }
 
 /*-----------------
@@ -2498,16 +2501,15 @@ html.menu-opened body {
 }
 
 .autocomplete-dropdown-container {
-  position: absolute; 
-  z-index: 1000; 
-  background-color: white; 
+  position: absolute;
+  z-index: 1000;
+  background-color: white;
   color: #28cea2;
-  border: 1px solid #ccc; 
-  max-height: 200px; 
-  overflow-y: auto; 
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 
 .suggestion-item {
   background-color: #ffffff;
@@ -3640,7 +3642,7 @@ html.menu-opened body {
 	12. Services
 -----------------------*/
 
-.react-calendar { 
+.react-calendar {
   width: 400px;
   max-width: 100%;
   background-color: #fff;
@@ -3649,61 +3651,61 @@ html.menu-opened body {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.125em;
- }
- .react-calendar__navigation button {
+}
+.react-calendar__navigation button {
   color: #28cea2;
   min-width: 44px;
   background: none;
   font-size: 16px;
   margin-top: 8px;
- }
- .react-calendar__navigation button:enabled:hover,
- .react-calendar__navigation button:enabled:focus {
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
   background-color: #f8f8fa;
- }
- .react-calendar__navigation button[disabled] {
+}
+.react-calendar__navigation button[disabled] {
   background-color: #f0f0f0;
- }
- abbr[title] {
+}
+abbr[title] {
   text-decoration: none;
- }
- .react-calendar__month-view__days__day--weekend {
+}
+.react-calendar__month-view__days__day--weekend {
   color: #222;
- }
- .react-calendar__tile:enabled:hover,
- .react-calendar__tile:enabled:focus {
+}
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
   background: #f8f8fa;
   color: #28cea2;
   border-radius: 6px;
- }
- .react-calendar__tile--now {
+}
+.react-calendar__tile--now {
   background: #52cead;
   border-radius: 6px;
   font-weight: bold;
   color: #222;
- }
- .react-calendar__tile--now:enabled:hover,
- .react-calendar__tile--now:enabled:focus {
+}
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
   background: #52cead;
   border-radius: 6px;
   font-weight: bold;
   color: #28cea2;
- }
- .react-calendar__tile--hasActive:enabled:hover,
- .react-calendar__tile--hasActive:enabled:focus {
+}
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
   background: #f8f8fa;
- }
- .react-calendar__tile--active {
+}
+.react-calendar__tile--active {
   background: #28cea2;
   border-radius: 6px;
   font-weight: bold;
   color: white;
- }
- .react-calendar__tile--active:enabled:hover,
- .react-calendar__tile--active:enabled:focus {
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
   background: #28cea2;
   color: white;
- }
+}
 
 .service-wrap {
   margin-bottom: 30px;
@@ -12746,10 +12748,10 @@ fieldset#first-field {
 .header.header-nine .navbar-header {
   display: none;
 }
-.header.header-nine .header-nav {
+.header.header-nine .header-nav-new {
   height: 56px;
 }
-.header.header-nine.fixed .header-nav {
+.header.header-nine.fixed .header-nav-new {
   height: 85px;
 }
 .header-nine .main-menu-wrapper {
@@ -15816,8 +15818,16 @@ fieldset#first-field {
   transition: 0.5s;
 }
 
-.pricing-plans.pricing-plans-five:hover .pricing-planscontent.pricing-planscontent-five ul li span,
-.pricing-plans.pricing-plans-five.active .pricing-planscontent.pricing-planscontent-five ul li span {
+.pricing-plans.pricing-plans-five:hover
+  .pricing-planscontent.pricing-planscontent-five
+  ul
+  li
+  span,
+.pricing-plans.pricing-plans-five.active
+  .pricing-planscontent.pricing-planscontent-five
+  ul
+  li
+  span {
   color: #fff;
 }
 
@@ -22801,7 +22811,7 @@ header.header nav ul li a:hover {
   .header-navbar-rht > li.lang-nav {
     display: none;
   }
-  .header.header-four .header-nav {
+  .header.header-four .header-nav-new {
     padding: 0;
     justify-content: start;
   }
@@ -23695,7 +23705,7 @@ header.header nav ul li a:hover {
   .footer-two .footer-bottom .copyright-text p {
     text-align: left;
   }
-  .header-nav {
+  .header-nav-new {
     height: 65px;
   }
   .provider-info {
@@ -23839,7 +23849,7 @@ header.header nav ul li a:hover {
   .working-four-main {
     margin-bottom: 20px;
   }
-  .header.header-four .header-nav {
+  .header.header-four .header-nav-new {
     justify-content: space-between;
   }
   .search-box.search-box-four .search-btn .btn {
@@ -24324,10 +24334,10 @@ header.header nav ul li a:hover {
   .category-eight-slider .owl-nav button.owl-next {
     margin-bottom: 0;
   }
-  .header.header-nine .header-nav {
+  .header.header-nine .header-nav-new {
     height: 65px;
   }
-  .header.header-nine.fixed .header-nav {
+  .header.header-nine.fixed .header-nav-new {
     height: 65px;
   }
   .single-demo .demo-info a {
@@ -25365,7 +25375,7 @@ header.header nav ul li a:hover {
   .card-footer {
     padding: 0.75rem 1.25rem;
   }
-  .header-nav {
+  .header-nav-new {
     padding-left: 15px;
     padding-right: 15px;
   }

@@ -99,84 +99,81 @@ const ProviderProfileSettings = () => {
         },
       );
 
- 
+      // If the first API call is successful, upload each file in proofOfId and proofOfAddress
+      const uploadPromises = [];
 
-        // If the first API call is successful, upload each file in proofOfId and proofOfAddress
-        const uploadPromises = [];
+      if (proofOfId && proofOfId.length > 0) {
+        proofOfId.forEach((file, index) => {
+          const formData = new FormData();
+          formData.append('file', file);
 
-        if (proofOfId && proofOfId.length > 0) {
-          proofOfId.forEach((file, index) => {
-            const formData = new FormData();
-            formData.append('file', file);
-
-            const uploadPromise = axios
-              .post(
-                `https://wgjgzlvwmoavtpeylund.supabase.co/storage/v1/object/documents/${user_id}/proof_of_id/${index}`,
-                formData,
-                {
-                  headers: {
-                    Authorization: `Bearer ${access_token}`,
-                    apiKey: process.env.REACT_APP_BEARER_TOKEN,
-                    'Content-Type': 'multipart/form-data',
-                  },
+          const uploadPromise = axios
+            .post(
+              `https://wgjgzlvwmoavtpeylund.supabase.co/storage/v1/object/documents/${user_id}/proof_of_id/${index}`,
+              formData,
+              {
+                headers: {
+                  Authorization: `Bearer ${access_token}`,
+                  apiKey: process.env.REACT_APP_BEARER_TOKEN,
+                  'Content-Type': 'multipart/form-data',
                 },
-              )
-              .catch((error) =>
-                console.error(`proofOfId file ${index} upload failed`, error),
-              );
+              },
+            )
+            .catch((error) =>
+              console.error(`proofOfId file ${index} upload failed`, error),
+            );
 
-            uploadPromises.push(uploadPromise);
-          });
-        }
+          uploadPromises.push(uploadPromise);
+        });
+      }
 
-        if (proofOfAddress && proofOfAddress.length > 0) {
-          proofOfAddress.forEach((file, index) => {
-            const formData = new FormData();
-            formData.append('file', file);
+      if (proofOfAddress && proofOfAddress.length > 0) {
+        proofOfAddress.forEach((file, index) => {
+          const formData = new FormData();
+          formData.append('file', file);
 
-            const uploadPromise = axios
-              .post(
-                `https://wgjgzlvwmoavtpeylund.supabase.co/storage/v1/object/documents/${user_id}/proof_of_address/${index}`,
-                formData,
-                {
-                  headers: {
-                    Authorization: `Bearer ${access_token}`,
-                    apiKey: process.env.REACT_APP_BEARER_TOKEN,
-                    'Content-Type': 'multipart/form-data',
-                  },
+          const uploadPromise = axios
+            .post(
+              `https://wgjgzlvwmoavtpeylund.supabase.co/storage/v1/object/documents/${user_id}/proof_of_address/${index}`,
+              formData,
+              {
+                headers: {
+                  Authorization: `Bearer ${access_token}`,
+                  apiKey: process.env.REACT_APP_BEARER_TOKEN,
+                  'Content-Type': 'multipart/form-data',
                 },
-              )
-       
-              .catch((error) =>
-                console.error(
-                  `proofOfAddress file ${index} upload failed`,
-                  error,
-                ),
-              );
+              },
+            )
 
-            uploadPromises.push(uploadPromise);
-          });
+            .catch((error) =>
+              console.error(
+                `proofOfAddress file ${index} upload failed`,
+                error,
+              ),
+            );
+
+          uploadPromises.push(uploadPromise);
+        });
+      }
+
+      // Wait for all uploads to complete
+      await Promise.all(uploadPromises);
+
+      loadingModal.hide();
+
+      const successModalElement = document.getElementById('successmodal');
+      const successModal = new Modal(successModalElement);
+      successModal.show();
+
+      setTimeout(() => {
+        // Manually hide the modal and remove the modal backdrop
+        successModal.hide();
+        const modalBackdrop = document.querySelector('.modal-backdrop');
+        if (modalBackdrop) {
+          modalBackdrop.remove();
         }
-
-        // Wait for all uploads to complete
-        await Promise.all(uploadPromises);
-
-
-        loadingModal.hide();
-
-        const successModalElement = document.getElementById('successmodal');
-        const successModal = new Modal(successModalElement);
-        successModal.show();
-
-        setTimeout(() => {
-          // Manually hide the modal and remove the modal backdrop
-          successModal.hide();
-          const modalBackdrop = document.querySelector('.modal-backdrop');
-          if (modalBackdrop) {
-            modalBackdrop.remove();
-          }
-          navigate(routes.providerService);
-        }, 2000);
+        navigate(routes.providerService);
+      }, 2000);
     } catch (error) {
       loadingModal.hide();
 
@@ -409,7 +406,7 @@ const ProviderProfileSettings = () => {
                       <h6>
                         Drag &amp; drop files or <span>Browse</span>
                       </h6>
-                      <p>Supported formates: JPEG, PNG, PDF</p>
+                      <p>Supported Formats: JPEG, PNG, PDF</p>
                       <input
                         type="file"
                         accept="image/jpeg, image/png, application/pdf"
@@ -464,7 +461,7 @@ const ProviderProfileSettings = () => {
                       <h6>
                         Drag &amp; drop files or <span>Browse</span>
                       </h6>
-                      <p>Supported formates: JPEG, PNG, PDF</p>
+                      <p>Supported Formats: JPEG, PNG, PDF</p>
                       <input
                         type="file"
                         accept="image/jpeg, image/png, application/pdf"

@@ -431,7 +431,6 @@ const ProviderEditService = () => {
             },
           },
         );
-
       } catch (workingHoursError) {
         console.error('Error:', workingHoursError);
       }
@@ -464,7 +463,6 @@ const ProviderEditService = () => {
             },
           },
         );
-
       } catch (pricesError) {
         console.error('Error:', pricesError);
       }
@@ -473,7 +471,6 @@ const ProviderEditService = () => {
         driver_id: user_id,
         driver_service_id: serviceId,
         price: longDistancePrices,
-
       };
 
       try {
@@ -488,7 +485,6 @@ const ProviderEditService = () => {
             },
           },
         );
-
       } catch (mileagePricesError) {
         console.error('Error:', mileagePricesError);
       }
@@ -519,7 +515,6 @@ const ProviderEditService = () => {
             },
           },
         );
-
       } catch (floorPricesError) {
         console.error('Error:', floorPricesError);
       }
@@ -550,7 +545,6 @@ const ProviderEditService = () => {
             },
           },
         );
-
       } catch (packingPricesError) {
         console.error('Error:', packingPricesError);
       }
@@ -581,7 +575,6 @@ const ProviderEditService = () => {
             },
           },
         );
-
       } catch (assemblyPricesError) {
         console.error('Error:', assemblyPricesError);
       }
@@ -612,7 +605,6 @@ const ProviderEditService = () => {
             },
           },
         );
-
       } catch (pianoPricesError) {
         console.error('Error:', pianoPricesError);
       }
@@ -638,7 +630,6 @@ const ProviderEditService = () => {
                 },
               },
             );
-
           } catch (error) {
             console.error('Error:', error);
           }
@@ -1256,7 +1247,7 @@ const ProviderEditService = () => {
                         <div className="col-md-6">
                           <div className="form-group">
                             <label className="col-form-label">
-                              Radius from your adreess your willing to work (in
+                              Radius from your address your willing to work (in
                               miles) <span className="text-danger">*</span>
                             </label>
                             <input
@@ -1280,7 +1271,7 @@ const ProviderEditService = () => {
                           </div>
                           <div className="form-group">
                             <label className="col-form-label">
-                              Vehicle Registraion Number{' '}
+                              Vehicle Registration Number{' '}
                               <span className="text-danger">*</span>
                             </label>
                             <input
@@ -1631,7 +1622,7 @@ const ProviderEditService = () => {
                                               value={
                                                 prices[
                                                   `${vehicleSize}_${loadingOption}_weekday`
-                                                ] 
+                                                ]
                                               }
                                               onChange={(e) =>
                                                 handlePriceChange(
@@ -2070,7 +2061,7 @@ const ProviderEditService = () => {
                           <h6>
                             Drag &amp; drop files or <span>Browse</span>
                           </h6>
-                          <p>Supported formates: JPEG, PNG, PDF</p>
+                          <p>Supported Formats: JPEG, PNG, PDF</p>
                           <input
                             type="file"
                             accept="image/jpeg, image/png, application/pdf"

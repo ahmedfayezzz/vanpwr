@@ -85,7 +85,6 @@ const ProviderVerification = () => {
       );
 
       if (response.status === 201) {
-
         // If the first API call is successful, upload each file in proofOfId and proofOfAddress
         const uploadPromises = [];
 
@@ -128,7 +127,7 @@ const ProviderVerification = () => {
                 },
               },
             )
-         
+
             .catch((error) =>
               console.error(
                 `proofOfAddress file ${index} upload failed`,
@@ -141,7 +140,6 @@ const ProviderVerification = () => {
 
         // Wait for all uploads to complete
         await Promise.all(uploadPromises);
-
 
         loadingModal.hide();
 
@@ -410,7 +408,7 @@ const ProviderVerification = () => {
                         <h6>
                           Drag &amp; drop files or <span>Browse</span>
                         </h6>
-                        <p>Supported formates: JPEG, PNG, PDF</p>
+                        <p>Supported Formats: JPEG, PNG, PDF</p>
                         <input
                           type="file"
                           accept="image/jpeg, image/png, application/pdf"
@@ -465,7 +463,7 @@ const ProviderVerification = () => {
                         <h6>
                           Drag &amp; drop files or <span>Browse</span>
                         </h6>
-                        <p>Supported formates: JPEG, PNG, PDF</p>
+                        <p>Supported Formats: JPEG, PNG, PDF</p>
                         <input
                           type="file"
                           accept="image/jpeg, image/png, application/pdf"

@@ -8,7 +8,7 @@ const ProviderAuthHeader = () => {
   return (
     <header className="header">
       <div className="container">
-        <nav className="navbar navbar-expand-lg header-nav">
+        <nav className="navbar navbar-expand-lg header-nav-new">
           <div className="navbar-header">
             <Link to={routes.homeOne} className="navbar-brand logo">
               <ImageWithBasePath
@@ -36,7 +36,6 @@ const ProviderAuthHeader = () => {
                 Login
               </Link>
             </li>
-
           </ul>
         </nav>
       </div>

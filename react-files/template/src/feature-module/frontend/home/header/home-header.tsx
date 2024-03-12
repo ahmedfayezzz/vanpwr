@@ -74,7 +74,7 @@ const HomeHeader: React.FC<props> = ({ type }) => {
   return (
     <header className={`header ${routerPath(type).className}`}>
       <div className="container">
-        <nav className="navbar navbar-expand-lg header-nav">
+        <nav className="navbar navbar-expand-lg header-nav-new">
           <div className="navbar-header">
             <Link onClick={toggleSidebar} id="mobile_btn" to="#">
               <span className="bar-icon">

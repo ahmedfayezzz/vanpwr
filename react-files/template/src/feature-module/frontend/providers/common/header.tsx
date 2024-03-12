@@ -6,6 +6,7 @@ import { all_routes } from '../../../../core/data/routes/all_routes';
 import ImageWithBasePath from '../../../../core/img/ImageWithBasePath';
 import { AppState } from '../../../../core/models/interface';
 import axios from 'axios';
+import AOS from 'aos';
 
 const ProviderHeader = () => {
   const routes = all_routes;
@@ -70,10 +71,14 @@ const ProviderHeader = () => {
     setIsFullscreen(!isFullscreen);
   };
 
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <header className="header header-one">
       <div className="container">
-        <nav className="navbar navbar-expand-lg header-nav">
+        <nav className="navbar navbar-expand-lg header-nav-new">
           <div className="navbar-header">
             <Link onClick={toggleSidebar} id="mobile_btn" to="#">
               <span className="bar-icon">

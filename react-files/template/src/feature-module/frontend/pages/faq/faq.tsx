@@ -30,12 +30,12 @@ const Faq = () => {
     {
       question: 'Is there a cancellation fee?',
       answer:
-        'If you for any reason decide to cancel your booking, a cancellation fee may apply. Please read our ‘Refund & Cancellation policy’. I would like the customer to be redirected to the terms & conditions page if they click “Refund & Cancellation Policy”.',
+        'If you for any reason decide to cancel your booking, a cancellation fee may apply. Please read our ‘Refund & Cancellation policy’ in the Terms and Conditions',
     },
     {
       question: 'What if my move takes longer than expected?',
       answer:
-        'Please ensure you book enough hours for your move, we recommend adding an extra 30 minutes to the time you expect it will take to load, drive and unload. If your move happens to take longer than expected, you will be able to extend your booking directly with the driver depending on their availability.',
+        'Please ensure you book enough hours for your move, we recommend adding an extra hour to the time you expect it will take to load, drive and unload. If your move happens to take longer than expected, you will be able to extend your booking directly with the driver depending on their availability.',
     },
     {
       question: 'What if the driver cancels my booking?',
@@ -66,22 +66,27 @@ const Faq = () => {
       question:
         'Can extra stops be made between the collection point and delivery point?',
       answer:
-        'Yes, extra stops can be made at a small charge, however this must be selected at the booking stage.',
+        'Yes, extra stops can be made, however this must be selected at the booking stage.',
     },
     {
       question: 'Are your drivers insured?',
       answer:
-        'Yes, all the drivers are insured. You can choose between basic cover and premium cover.',
+        'Yes, all the drivers are insured. You can choose between bronze cover, silver cover and gold cover.',
     },
     {
-      question: 'What is basic cover?',
+      question: 'What is bronze cover?',
       answer:
-        'Basic cover means that the driver holds a valid motor insurance and a driver’s license.',
+        'Bronze cover means that the driver holds a valid motor insurance and a driver’s license.',
     },
     {
-      question: 'What is premium cover?',
+      question: 'What is silver cover?',
       answer:
-        'Premium cover means that the driver holds a valid motor insurance, driver’s license, goods in transit insurance as well as public liability insurance.',
+        'Silver cover means that the driver holds a valid motor insurance, driver’s license, and goods in transit insurance.',
+    },
+    {
+      question: 'What is gold cover?',
+      answer:
+        'Gold cover means that the driver holds a valid motor insurance, driver’s license, goods in transit insurance as well as public liability insurance.',
     },
     {
       question: 'What if I book the wrong van size?',
@@ -91,7 +96,7 @@ const Faq = () => {
     {
       question: 'What if my driver is late?',
       answer:
-        'Our drivers aim to be on time, every time. However, drivers may sometimes be delayed due to unforeseen circumstances such as bad weather and traffic. In this case the driver would call ahead to notify you about the delay, if you are unable to wait for the driver then please do give us a call and we will do our best to dispatch a different driver who will be able to get to you earlier.',
+        'Our drivers aim to be on time, every time. However, drivers may sometimes be delayed due to unforeseen circumstances such as bad weather and traffic. In this case the driver would call ahead to notify you about the delay, if you are unable to wait for the driver then please contact us immediately and we will do our best to dispatch a different driver who will be able to get to you earlier.',
     },
     {
       question: 'What if I am late?',

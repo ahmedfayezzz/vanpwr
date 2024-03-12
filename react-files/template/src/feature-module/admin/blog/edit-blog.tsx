@@ -137,7 +137,7 @@ const EditBlog = () => {
                             <Link to="#"> Browse</Link>
                           </div>
                         </div>
-                        <h5>Supported formates: JPEG, PNG</h5>
+                        <h5>Supported Formats: JPEG, PNG</h5>
                       </div>
                     </div>
                   </div>
